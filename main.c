@@ -85,6 +85,7 @@ char* testCopyString() {
         }
 
         string_destroy(&string);
+        string_destroy(&target);
     }
 
     return NULL;
@@ -100,6 +101,9 @@ int main() {
         NULL
     };
 
+    printf("sizeof(void*) => %zu\n", sizeof(void*));
+    printf("sizeof(size_t) => %zu\n", sizeof(size_t));
+    printf("sizeof(string_t) => %zu\n", sizeof(string_t));
     puts("Starting tests...");
 
     size_t testsFailed = 0;
@@ -120,7 +124,7 @@ int main() {
 
             testsFailed++;
 
-            fprintf(stderr, "Error: Test #%llu failed:\n", currentTest - tests);
+            fprintf(stderr, "Error: Test #%zu failed:\n", currentTest - tests);
 
             fprintf(stderr, "%s\n", currentTestResponse);
 

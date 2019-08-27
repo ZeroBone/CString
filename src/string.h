@@ -6,7 +6,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-#define STRING_SHORT_STRING_LENGTH 12 // should be multiple of word size for space efficiency
+#define STRING_SHORT_STRING_LENGTH 12 // should be multiple of word size for space efficiency, not less than 1
 
 typedef struct {
     size_t length;
